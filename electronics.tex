@@ -1,0 +1,495 @@
+% electronics.tex
+% Content for the EL100 - Basics of Electronics module.
+
+\section{EL100 - Basics of Electronics}
+\addtocounter{section}{4}% Ensure section counter is correct if needed for auto-numbering consistency.
+
+\begin{tcolorbox}[boxstyle, title={Module Overview}]
+    This module introduces students to the fundamental concepts of electronics through hands-on circuit building, from basic principles to microcontroller programming. The goal is to provide a foundational understanding of how electronic components work together to create functional devices.
+\end{tcolorbox}
+
+\subsubsection*{Total Sessions: 9}
+
+\begin{tcolorbox}[boxstyle, title={Session Structure}]
+    Each session adheres to the 1-hour lecture and 2-hour interactive format.
+    \begin{itemize}
+        \item \textbf{Lectures} will cover theoretical principles (e.g., Ohm's Law, Kirchhoff's Circuit Laws), introduce specific electronic components (resistors, capacitors, LEDs, sensors), and delve into microcontroller programming concepts using platforms like Arduino.
+        \item \textbf{Interactive Sessions} will be almost entirely practical, taking place at individual workstations equipped with breadboards, various electronic components, multimeters, and microcontrollers. Students will build, test, and troubleshoot circuits from schematics, measure electrical properties, and program their microcontrollers to interact with physical inputs and outputs. Project-based sessions (S8, S9) will serve as intensive workshops where students integrate their learned coding and circuit-building skills to design, assemble, and test a functional electronic device or interactive system.
+    \end{itemize}
+\end{tcolorbox}
+
+% --- Detailed sessions for EL100 ---
+
+\subsection{S1: Intro to Electricity}
+\objectivebox{
+    \item \textbf{Define} fundamental electrical concepts: voltage, current, resistance.
+    \item \textbf{Explain} Ohm's Law and its application in simple circuits.
+    \item \textbf{Identify} common circuit components (resistors, LEDs, wires, power source).
+    \item \textbf{Differentiate} between open and closed circuits.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Breadboards, jumper wires, 9V batteries and clips, resistors (various values), LEDs (various colors), multimeters.
+    \item \textbf{Teaching Aids:} Presentation slides, circuit diagrams, breadboard layout diagrams, safety guidelines for handling electricity.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{What is Electricity?} Introduction to electrons, charge, and basic concepts of current flow.
+        \item \textbf{Voltage, Current, Resistance:} Analogies (water pressure, water flow, pipe friction) to explain these concepts. Units of measurement (Volts, Amperes, Ohms).
+        \item \textbf{Ohm's Law ($V = IR$):} Detailed explanation and derivation. Simple calculation examples.
+        \item \textbf{Basic Circuit Components:} Resistors (function, color code introduction), LEDs (polarity, current limiting), wires, power sources.
+        \item \textbf{Open vs. Closed Circuits:} Concept of a complete path for current.
+        \item \textbf{Safety First:} Emphasize electrical safety procedures.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Multimeter Introduction (30 minutes):} Hands-on practice using multimeters to measure voltage of a battery, continuity of a wire, and resistance of various resistors.
+        \item \textbf{Simple LED Circuit (60 minutes):} Guided build on breadboard:
+            \begin{itemize}
+                \item Connect a 9V battery, a resistor (e.g., 220 Ohm), and an LED in series.
+                \item Ensure LED lights up. Experiment with different resistor values to see brightness change.
+                \item Introduce concept of current limiting resistor for LED.
+            \end{itemize}
+        \item \textbf{Ohm's Law Practice (30 minutes):} Using their built circuit, students will measure voltage across resistor and LED, and current in the circuit. They will then calculate expected values using Ohm's Law and compare with measured values.
+        \item \textbf{Troubleshooting Basics (15 minutes):} Intentional introduction of common faults (e.g., reversed LED, open circuit) and guide students to troubleshoot.
+        \item \textbf{Assessment:} Successful construction of simple LED circuit, accurate multimeter readings, basic Ohm's Law calculations.
+    \end{itemize}
+}
+
+\subsection{S2: Breadboarding}
+\objectivebox{
+    \item \textbf{Understand} the internal structure and connections of a breadboard.
+    \item \textbf{Properly place} components and connect them on a breadboard to create a working circuit.
+    \item \textbf{Interpret} basic circuit schematics and translate them to a physical breadboard layout.
+    \item \textbf{Practice} neat and organized breadboarding techniques.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Breadboards (more than one size if possible), jumper wires (assorted lengths/colors), resistors, LEDs, pushbuttons, capacitors.
+    \item \textbf{Teaching Aids:} Large diagrams of breadboard internal connections, simple schematics, laminated "cheatsheets" for breadboard best practices.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Anatomy of a Breadboard:} Detailed explanation of rows (horizontal, power rails) and columns (vertical, component connections). Show internal metal clips.
+        \item \textbf{Power Rails:} Explain how power and ground rails work.
+        \item \textbf{Component Placement:} Best practices for neatly inserting components without short circuits.
+        \item \textbf{Translating Schematics to Breadboard:} Step-by-step method for converting a 2D schematic into a 3D breadboard layout. Emphasize planning wire routes.
+        \item \textbf{Common Breadboarding Mistakes:} Discuss issues like short circuits, loose connections, incorrect polarity.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Breadboard Exploration (30 minutes):} Students use a multimeter to check continuity on different parts of the breadboard to confirm internal connections.
+        \item \textbf{Switch-Controlled LED Circuit (75 minutes):} Guided build of a circuit where a pushbutton controls an LED (e.g., simple push-to-light circuit).
+            \begin{itemize}
+                \item Introduce pushbuttons and their operation.
+                \item Students follow a schematic to build the circuit from scratch.
+                \item Instructor checks for proper connections and provides troubleshooting tips.
+            \end{itemize}
+        \item \textbf{Neat Wiring Challenge (15 minutes):} Encourage students to rebuild a previous circuit with tidier wiring, using shorter wires and organizing components.
+        \item \textbf{Assessment:} Successful construction of the switch-controlled LED circuit, demonstration of understanding breadboard connections, neatness of wiring.
+    \end{itemize}
+}
+
+\subsection{S3: Series/Parallel Circuits}
+\objectivebox{
+    \item \textbf{Differentiate} between series and parallel circuit configurations for resistors.
+    \item \textbf{Calculate} total resistance in simple series and parallel resistor circuits.
+    \item \textbf{Observe} how current and voltage behave differently in series vs. parallel branches.
+    \item \textbf{Apply} Kirchhoff's Voltage Law (KVL) to series circuits and Kirchhoff's Current Law (KCL) to parallel circuits qualitatively.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Breadboards, jumper wires, 9V batteries, assorted resistors, multimeters.
+    \item \textbf{Teaching Aids:} Presentation slides with clear circuit diagrams for series and parallel configurations, worksheets for calculation practice.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Introduction to Circuit Configurations:} Why components are connected in different ways. Analogy: a single lane road (series) vs. a multi-lane highway (parallel).
+        \item \textbf{Series Circuits:}
+            \begin{itemize}
+                \item Definition: Components connected end-to-end, forming a single path for current.
+                \item Current: Same through all components.
+                \item Voltage: Divides across components.
+                \item Total Resistance: Sum of individual resistances ($R_{total} = R_1 + R_2 + \dots$).
+                \item \textbf{Qualitative KVL:} Voltage drops around a closed loop sum to zero (simplified for beginners).
+            \end{itemize}
+        \item \textbf{Parallel Circuits:}
+            \begin{itemize}
+                \item Definition: Components connected across the same two points, providing multiple paths for current.
+                \item Current: Divides among branches.
+                \item Voltage: Same across all components.
+                \item Total Resistance: Reciprocal sum of reciprocals ($\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots$, or product/sum for two resistors). Focus on concept, maybe simple two-resistor calculation.
+                \item \textbf{Qualitative KCL:} Current entering a junction equals current leaving it (simplified).
+            \end{itemize}
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Series Circuit Build \& Measurement (60 minutes):}
+        \begin{itemize}
+            \item Students build a simple series circuit with 2-3 resistors and an LED.
+            \item Use the multimeter to measure:
+                \begin{itemize}
+                    \item Total voltage from battery.
+                    \item Voltage drop across each resistor.
+                    \item Current at different points in the series circuit (to confirm it's constant).
+                \end{itemize}
+            \item Compare measured values with calculated expected values using Ohm's Law and series resistance formula.
+        \end{itemize}
+
+        \item \textbf{Parallel Circuit Build \& Measurement (60 minutes):}
+        \begin{itemize}
+            \item Students build a simple parallel circuit with 2-3 resistors and LEDs.
+            \item Use the multimeter to measure:
+                \begin{itemize}
+                    \item Voltage across each parallel branch (to confirm it's constant).
+                    \item Current in each branch (to observe current division).
+                    \item Total current from the battery.
+                \end{itemize}
+            \item Compare measured values with calculated expected values.
+        \end{itemize}
+
+        \item \textbf{Concept Reinforcement (30 minutes):}
+        \begin{itemize}
+            \item Discussion: "What happens if one LED breaks in a series circuit vs. a parallel circuit?" (leading to understanding reliability).
+            \item Quick design challenge: "Design a circuit to power two LEDs at the same brightness, but if one breaks, the other stays on."
+        \end{itemize}
+
+        \item \textbf{Assessment:} Correct construction of series and parallel circuits, accurate measurements demonstrating circuit laws, ability to explain differences between series and parallel behavior.
+    \end{itemize}
+}
+
+\subsection{S4: Capacitors}
+\objectivebox{
+    \item \textbf{Identify} a capacitor and describe its basic function in a circuit.
+    \item \textbf{Explain} how a capacitor stores and releases electrical energy.
+    \item \textbf{Observe} the charging and discharging behavior of a capacitor using an LED.
+    \item \textbf{Understand} the concept of RC time constant qualitatively.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Breadboards, jumper wires, 9V batteries, resistors (e.g., 1kΩ, 10kΩ), LEDs, electrolytic capacitors (e.g., 100$\mu F$, 470$\mu F$, 1000$\mu F$), multimeters.
+    \item \textbf{Teaching Aids:} Presentation slides with capacitor symbols and internal structure (simplified), video demonstrations of capacitor charging/discharging.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Introduction to Capacitors:} What is a capacitor? Analogy: a small water tank that can store water (charge) and release it.
+        \item \textbf{Functionality:} How capacitors store electrical charge in an electric field between two conductive plates separated by a dielectric.
+        \item \textbf{Charging and Discharging:} Explain the process of a capacitor charging when connected to a voltage source and discharging when the source is removed or shorted.
+        \item \textbf{Capacitor Types and Polarity:} Briefly introduce different types, emphasizing the importance of polarity for electrolytic capacitors.
+        \item \textbf{Qualitative RC Time Constant:} Explain that the time it takes for a capacitor to charge/discharge depends on both its capacitance (C) and the resistance (R) in the circuit. No complex formulas, just the concept of "longer R or C means slower change."
+        \item \textbf{Applications (Brief):} Mention basic applications like smoothing power, timing circuits (very briefly).
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Capacitor Identification \& Polarity (15 minutes):} Students identify different capacitors, paying attention to markings for capacitance and voltage, and recognizing the polarity of electrolytic capacitors.
+        \item \textbf{RC Charging/Discharging with LED (60 minutes):}
+        \begin{itemize}
+            \item Students build a simple circuit: 9V battery, push-button (to charge), resistor, capacitor, and LED.
+            \item Observe the LED gradually dim as the capacitor discharges through it.
+            \item Experiment with different resistor values (e.g., 1kΩ vs 10kΩ) and capacitor values (e.g., 100$\mu F$ vs 1000$\mu F$) to see how the dimming time changes.
+            \item Discussion: "Why does the LED dim slowly instead of turning off instantly?"
+        \end{itemize}
+        \item \textbf{Measuring Capacitor Voltage (30 minutes):}
+        \begin{itemize}
+            \item Use a multimeter to measure the voltage across a charging capacitor over time (students can record readings at intervals to see the voltage curve).
+            \item Measure the voltage across a discharging capacitor.
+        \end{itemize}
+        \item \textbf{Concept Reinforcement (15 minutes):}
+        \begin{itemize}
+            \item Quick discussion on how this "storage" behavior is useful in electronics.
+            \item Brainstorming where a capacitor might be used in everyday devices (e.g., camera flash, power adapter).
+        \end{itemize}
+        \item \textbf{Assessment:} Correct wiring of capacitor circuits, observation and qualitative explanation of charging/discharging behavior, ability to relate R and C values to timing.
+    \end{itemize}
+}
+
+\subsection{S5: Microcontrollers (Arduino)}
+\objectivebox{
+    \item \textbf{Identify} a microcontroller (e.g., Arduino Uno) and understand its purpose in electronics.
+    \item \textbf{Recognize} the basic components of an Arduino board (digital pins, analog pins, power, USB).
+    \item \textbf{Upload} a simple "blink" program to an Arduino board.
+    \item \textbf{Understand} the basic structure of an Arduino sketch (\texttt{setup()}, \texttt{loop()}).
+}
+\materialsbox{
+    \item \textbf{Hardware:} Arduino Uno boards (1 per student/pair), USB cables, breadboards, jumper wires, LEDs, 220 Ohm resistors.
+    \item \textbf{Software:} Arduino IDE (pre-installed), sample "Blink" sketch.
+    \item \textbf{Teaching Aids:} Large diagram of Arduino Uno pinout, simplified Arduino C++ syntax cheatsheet.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{What is a Microcontroller?} Introduction to embedded systems – tiny computers designed for specific tasks. Analogy: the "brain" of an electronic device.
+        \item \textbf{Introduction to Arduino:} Open-source platform, ease of use for beginners, role in prototyping.
+        \item \textbf{Arduino Uno Board Layout:} Explain key components: digital I/O pins (input/output), analog input pins, power pins (5V, GND), USB port for programming and power.
+        \item \textbf{The Arduino IDE:} Overview of its interface (sketch editor, verify/upload buttons, serial monitor).
+        \item \textbf{Basic Arduino Sketch Structure:}
+            \begin{itemize}
+                \item \texttt{void setup():} Runs once at the beginning (for initial setup of pins, etc.).
+                \item \texttt{void loop():} Runs repeatedly forever (for continuous operations).
+            \end{itemize}
+        \item \textbf{First Program: "Blink LED":} Walkthrough of the classic "Blink" sketch (\texttt{pinMode()}, \texttt{digitalWrite()}, \texttt{delay()}).
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Arduino IDE \& Board Familiarization (30 minutes):}
+        \begin{itemize}
+            \item Students open Arduino IDE, connect Arduino via USB.
+            \item Select correct board and port in the IDE.
+            \item Identify key components on their physical Arduino board.
+        \end{itemize}
+
+        \item \textbf{Build and Upload "Blink" Circuit (60 minutes):}
+        \begin{itemize}
+            \item Guided build of an LED circuit connected to a digital pin on the Arduino via a resistor.
+            \item Open the "Blink" example sketch.
+            \item Students verify and upload the sketch to their Arduino. Observe the LED blinking.
+            \item Experiment by changing the \texttt{delay()} values and re-uploading to see the blink speed change.
+        \end{itemize}
+
+        \item \textbf{First Custom Code: "SOS" Blink (30 minutes):}
+        \begin{itemize}
+            \item Challenge students to modify the "Blink" sketch to create an "SOS" pattern using different delays (short, long, short).
+            \item Discuss the concept of sequential execution and timing.
+        \end{itemize}
+
+        \item \textbf{Troubleshooting Common Issues (15 minutes):}
+        \begin{itemize}
+            \item Discuss common problems: incorrect board/port selection, wiring errors, missing semicolons in code.
+            \item Guide students through basic troubleshooting steps.
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful upload and execution of the "Blink" sketch, modification to create a custom pattern, ability to identify basic Arduino components and IDE elements.
+    \end{itemize}
+}
+
+\subsection{S6: Simple Sensors}
+\objectivebox{
+    \item \textbf{Understand} the basic concept of a sensor and its role in converting physical phenomena into electrical signals.
+    \item \textbf{Connect} a simple digital sensor (e.g., push-button, PIR motion sensor) to Arduino.
+    \item \textbf{Read} digital input from a sensor using Arduino code (\texttt{digitalRead()}).
+    \item \textbf{Control} an LED or other output based on sensor input.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Arduino Uno boards, USB cables, breadboards, jumper wires, LEDs, 220 Ohm resistors, push-buttons, PIR motion sensors (passive infrared).
+    \item \textbf{Software:} Arduino IDE.
+    \item \textbf{Teaching Aids:} Datasheets (simplified) for push-button and PIR sensor, circuit diagrams for connecting sensors to Arduino.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{What are Sensors?} Introduction to how electronic devices "sense" the world. Analogy: eyes, ears, touch.
+        \item \textbf{Digital vs. Analog Sensors (Brief):} Distinguish between sensors that provide ON/OFF signals (digital) and those that provide a range of values (analog). Focus mainly on digital for this session.
+        \item \textbf{Push-button as a Digital Sensor:} How a button changes a circuit's state from HIGH to LOW or vice-versa. Concepts of pull-up/pull-down resistors (simplified, may use internal pull-up).
+        \item \textbf{PIR Motion Sensor (Digital):} Explain how it detects infrared radiation from movement, outputting a HIGH or LOW signal.
+        \item \textbf{Reading Digital Input (\texttt{digitalRead()}):} How Arduino reads the state of a digital pin.
+        \item \textbf{Connecting Sensors to Arduino:} Wiring diagrams and best practices for sensor integration.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Push-button Control LED (60 minutes):}
+        \begin{itemize}
+            \item Students build a circuit: push-button connected to a digital input pin, LED connected to a digital output pin.
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item Use \texttt{pinMode()} for input and output.
+                    \item Use \texttt{digitalRead()} to check button state.
+                    \item Use \texttt{digitalWrite()} to control LED based on button state (e.g., LED turns on when button is pressed).
+                \end{itemize}
+            \item Experiment with internal pull-up resistor if applicable.
+        \end{itemize}
+
+        \item \textbf{PIR Motion Sensor Alarm (60 minutes):}
+        \begin{itemize}
+            \item Students connect a PIR sensor to an Arduino digital input pin.
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item Read the PIR sensor's state.
+                    \item If motion is detected (HIGH signal), turn on an LED "alarm" for a few seconds.
+                    \item Use \texttt{Serial.println()} to print messages to the Serial Monitor when motion is detected/cleared (introducing Serial Monitor for debugging).
+                \end{itemize}
+        \end{itemize}
+
+        \item \textbf{Concept Application (15 minutes):}
+        \begin{itemize}
+            \item Discussion: "Where could you use a motion sensor or a button in a real device?" (e.g., automatic lights, doorbell).
+            \item Brainstorming: "What other digital sensors might exist?"
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful implementation of circuits where LED output is controlled by digital sensor input, basic understanding of `digitalRead()`, effective use of Serial Monitor for debugging.
+    \end{itemize}
+}
+
+\subsection{S7: More Sensors}
+\objectivebox{
+    \item \textbf{Understand} the basic concept of analog signals and analog-to-digital conversion (ADC).
+    \item \textbf{Connect} a simple analog sensor (e.g., potentiometer, photoresistor/LDR) to Arduino.
+    \item \textbf{Read} analog input from a sensor using Arduino code (\texttt{analogRead()}).
+    \item \textbf{Control} an LED's brightness based on analog sensor input using Pulse Width Modulation (PWM).
+}
+\materialsbox{
+    \item \textbf{Hardware:} Arduino Uno boards, USB cables, breadboards, jumper wires, LEDs, 220 Ohm resistors, potentiometers, photoresistors (LDRs), 10k Ohm resistors (for LDR voltage divider).
+    \item \textbf{Software:} Arduino IDE.
+    \item \textbf{Teaching Aids:} Diagrams of analog input pins, explanation of ADC, simple voltage divider circuit diagram, PWM concept visual.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Analog Signals:} Explain that the real world is analog (continuous values like temperature, light intensity). How analog sensors provide a varying voltage output.
+        \item \textbf{Analog-to-Digital Conversion (ADC):} How Arduino converts a continuous analog voltage into a discrete digital number (0-1023 range for Arduino Uno). Explain `analogRead()`.
+        \item \textbf{Potentiometer as an Analog Sensor:} How it works as a variable resistor, providing a variable voltage output.
+        \item \textbf{Photoresistor/LDR (Light Dependent Resistor):} How its resistance changes with light. Explain simple voltage divider circuit to get a variable voltage output.
+        \item \textbf{Pulse Width Modulation (PWM):} Introduction to how digital pins can simulate analog output (e.g., dimming an LED) by rapidly turning ON/OFF the voltage. Explain `analogWrite()`.
+        \item \textbf{Mapping Values (\texttt{map()} function):} Briefly introduce the `map()` function to convert a range of values (e.g., 0-1023 from ADC) to another range (e.g., 0-255 for PWM).
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Potentiometer \& Serial Monitor (60 minutes):}
+        \begin{itemize}
+            \item Students connect a potentiometer to an analog input pin on the Arduino.
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item Use \texttt{analogRead()} to read the potentiometer value.
+                    \item Print the raw analog value to the Serial Monitor.
+                    \item Rotate the potentiometer and observe the changing values in the Serial Monitor.
+                \end{itemize}
+            \item Introduce the \texttt{map()} function to convert the 0-1023 range to a more understandable 0-100 percentage.
+        \end{itemize}
+
+        \item \textbf{LDR/Photoresistor Light Dimmer (60 minutes):}
+        \begin{itemize}
+            \item Students build a voltage divider circuit with an LDR.
+            \item Connect the LDR circuit to an analog input pin and an LED to a PWM-enabled digital output pin.
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item Read the LDR value.
+                    \item Use the \texttt{map()} function to convert the LDR reading to an appropriate 0-255 range for LED brightness.
+                    \item Use \texttt{analogWrite()} to control the LED brightness.
+                \end{itemize}
+            \item Test the circuit by varying the light intensity on the LDR and observe the LED brightness change.
+        \end{itemize}
+
+        \item \textbf{Concept Application (15 minutes):}
+        \begin{itemize}
+            \item Discussion: "Where could you use a potentiometer or a light sensor in a real device?" (e.g., volume control, automatic street lights).
+            \item Brainstorming: "What other analog sensors might exist and what could they measure?"
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful implementation of circuits reading analog sensors, correct use of \texttt{analogRead()} and \texttt{analogWrite()}, demonstrated understanding of mapping values, ability to control output based on analog input.
+    \end{itemize}
+}
+
+\subsection{\texorpdfstring{S8: Project Session \\ Automated Night Light}
+                              {S8: Project Session Automated Night Light}}
+
+\objectivebox{
+    \item \textbf{Integrate} an analog light sensor (LDR) to detect ambient light levels.
+    \item \textbf{Program} an Arduino to automatically control an LED based on light intensity.
+    \item \textbf{Apply} conditional logic (\texttt{if}/\texttt{else}) to switch the LED ON/OFF at a specified light threshold.
+    \item \textbf{Calibrate} the light threshold for optimal performance in different environments.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Arduino Uno boards, USB cables, breadboards, jumper wires, LED, 220 Ohm resistor, Photoresistor (LDR), 10k Ohm resistor (for LDR voltage divider).
+    \item \textbf{Software:} Arduino IDE.
+    \item \textbf{Teaching Aids:} Simple circuit diagram for LDR and LED, Serial Monitor output examples for calibration, troubleshooting guide for common wiring/logic errors.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Project Overview (15 minutes):} Introduce the Automated Night Light concept. Discuss how it combines a sensor (LDR) with a microcontroller (Arduino) to automate a task.
+        \item \textbf{Review: LDR and Analog Input (15 minutes):} Briefly recap how the LDR works and how `analogRead()` translates light intensity into a numerical value. Emphasize the voltage divider.
+        \item \textbf{Thresholding with Conditionals (15 minutes):} Explain how to use an `if`/`else` statement to create a "decision point" based on the analog reading (e.g., if light reading is below X, turn LED on; else, turn off).
+        \item \textbf{Calibration Importance (15 minutes):} Discuss the need to find the right numerical threshold for "dark" and "light" conditions, and how to use the Serial Monitor for this calibration.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Circuit Assembly (60 minutes):}
+        \begin{itemize}
+            \item Students build the circuit for the LDR voltage divider and connect it to an analog input pin on the Arduino.
+            \item Connect an LED to a digital output pin on the Arduino (with a current-limiting resistor).
+        \end{itemize}
+
+        \item \textbf{Initial Programming and Calibration (60 minutes):}
+        \begin{itemize}
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item In \texttt{setup()}, initialize Serial communication (\texttt{Serial.begin()}) and set LED pin as output.
+                    \item In \texttt{loop()}, read the LDR value using \texttt{analogRead()}.
+                    \item Print the LDR value to the Serial Monitor (\texttt{Serial.println()}) to observe readings in different light conditions.
+                    \item Experiment with various light levels (e.g., cover LDR, shine light) and note down approximate "dark" and "light" threshold values.
+                \end{itemize}
+        \end{itemize}
+
+        \item \textbf{Implementing Logic (45 minutes):}
+        \begin{itemize}
+            \item Based on their calibration, students add an \texttt{if}/\texttt{else} statement to their code:
+                \begin{itemize}
+                    \item If LDR reading is below the "dark" threshold, use \texttt{digitalWrite()} to turn the LED HIGH.
+                    \item Else, turn the LED LOW.
+                \end{itemize}
+            \item Test the automated night light by varying ambient light conditions.
+        \end{itemize}
+
+        \item \textbf{Refinement \& Troubleshooting (15 minutes):}
+        \begin{itemize}
+            \item Refine the threshold value for better sensitivity.
+            \item Debug any wiring or logic errors preventing the light from working as expected.
+            \item Discuss how to make the light only activate in specific conditions (e.g., only after 5 seconds of darkness).
+        \end{itemize}
+
+        \item \textbf{Assessment:} A working automated night light circuit, correctly calibrated light threshold, proper use of analog input and conditional logic for automation.
+    \end{itemize}
+    }
+
+\subsection{\texorpdfstring{S9: Project Session\\ Simple Motion-Activated Alarm}
+                              {S9: Project Session Simple Motion-Activated Alarm}}
+
+\objectivebox{
+    \item \textbf{Utilize} a digital motion sensor (PIR) to detect presence or movement.
+    \item \textbf{Program} an Arduino to trigger an output (LED or buzzer) when motion is detected.
+    \item \textbf{Implement} a timed response for the alarm/light to stay active for a set duration.
+    \item \textbf{Debug} sensor integration and timing issues.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Arduino Uno boards, USB cables, breadboards, jumper wires, LED, 220 Ohm resistor, PIR Motion Sensor. (Optional: small passive buzzer).
+    \item \textbf{Software:} Arduino IDE.
+    \item \textbf{Teaching Aids:} PIR sensor pinout diagram, state diagram for alarm logic, troubleshooting checklist for motion sensors.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Project Overview (15 minutes):} Introduce the motion-activated alarm/light project. Discuss its use in security systems, automatic lighting, etc.
+        \item \textbf{Review: PIR Sensor and Digital Input (15 minutes):} Recap how the PIR sensor outputs a digital HIGH when motion is detected.
+        \item \textbf{Timed Responses (\texttt{delay()}) (15 minutes):} Explain how to make the alarm/light stay on for a specific duration after motion is detected, using the `delay()` function.
+        \item \textbf{Designing the Alarm Logic (15 minutes):} Discuss the sequence: motion detected $\rightarrow$ turn on alarm $\rightarrow$ wait $\rightarrow$ turn off alarm (or wait until motion clears).
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Circuit Assembly (60 minutes):}
+        \begin{itemize}
+            \item Students connect the PIR motion sensor to a digital input pin on the Arduino. Ensure correct power (\texttt{VCC}), ground (\texttt{GND}), and data out (\texttt{OUT}) pins are used.
+            \item Connect an LED (or optional buzzer) to a digital output pin on the Arduino (with a current-limiting resistor for LED).
+        \end{itemize}
+
+        \item \textbf{Programming Core Logic (60 minutes):}
+        \begin{itemize}
+            \item Write an Arduino sketch:
+                \begin{itemize}
+                    \item In \texttt{setup()}, initialize LED/buzzer pin as output and PIR sensor pin as input. Initialize Serial communication.
+                    \item In \texttt{loop()}, use \texttt{digitalRead()} to check the state of the PIR sensor.
+                    \item If motion is detected (\texttt{HIGH}), use \texttt{digitalWrite()} to turn on the LED (or buzzer). Print "Motion Detected!" to Serial Monitor.
+                    \item Add a \texttt{delay()} to keep the alarm/light on for a few seconds.
+                    \item Use \texttt{digitalWrite()} to turn off the LED (or buzzer) after the delay. Print "Motion Cleared."
+                \end{itemize}
+        \end{itemize}
+
+        \item \textbf{Refinement \& Troubleshooting (45 minutes):}
+        \begin{itemize}
+            \item Adjust the delay time for the alarm/light.
+            \item Explore the PIR sensor's sensitivity and delay potentiometers (if available on the sensor module).
+            \item Debug any wiring or logic errors (e.g., LED always on/off, sensor not responding). Use Serial Monitor extensively for debugging.
+            \item Optional: Add a counter for how many times motion has been detected.
+        \end{itemize}
+
+        \item \textbf{Assessment:} A functional motion-activated alarm/light circuit, correct integration of PIR sensor, appropriate use of digital input/output and timing for automated response.
+    \end{itemize}
+}

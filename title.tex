@@ -1,0 +1,38 @@
+% title.tex
+% This file defines the title page of the document.
+
+\begin{titlepage}
+
+ \centering
+    
+    % --- Logo ---
+    % Replace with your actual logo file (e.g., logo.png or logo.jpg)
+    \includegraphics[width=7cm]{logo.jpg}
+    
+    
+    \centering
+    \vspace*{2cm} % Space from the top of the page
+
+    % Program Logo (Optional - uncomment and replace with your logo path)
+    % \includegraphics[width=0.4\textwidth]{your_logo.png}\par\vspace{1cm}
+
+    {\color{primaryblue}\rule{\textwidth}{1.5pt}}\par % Thick blue line
+    \vspace{1em}
+    {\Huge\bfseries \programname \par} % Program Name
+    {\huge\bfseries \docsubtitle \par} % Document Subtitle
+    \vspace{1em}
+    {\color{primaryblue}\rule{\textwidth}{0.8pt}}\par % Thinner blue line
+
+    \vspace{2cm} % Space between title and authors
+
+    {\Large \teamname \par} % Team Name
+    \vspace{0.5cm}
+    {\large \docdate \par} % Date
+
+    \vfill % Pushes content to the bottom
+
+    {\color{darkgray}
+    \small
+  Prepared for high school students, this document outlines a 6-week interleaved summer program designed to introduce participants to technology through foundational training in computer programming with Python, basic computer skills, introductory electronics, and effective communication.
+    }
+\end{titlepage}

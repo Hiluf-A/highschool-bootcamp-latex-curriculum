@@ -1,0 +1,500 @@
+% python.tex
+% Content for the PY101 - Introduction to Computer Programming with Python module.
+
+\section{PY101 - Introduction to Computer Programming with Python}
+\addtocounter{section}{3} % Ensure section counter is correct if needed for auto-numbering consistency.
+
+\begin{tcolorbox}[boxstyle, title={Module Overview}]
+    This module introduces students to the fundamental concepts of computer programming using the Python language, covering basic syntax and culminating in a mentored mini-project. The focus is on exploring the core principles of programming and demonstrating what students can achieve by developing coding skills. Through hands-on exercises and problem-solving activities, students will gain an introductory understanding of programming logic and its real-world applications, setting a foundation for future learning.
+\end{tcolorbox}
+
+\subsubsection*{Total Sessions: 9}
+
+\begin{tcolorbox}[boxstyle, title={Session Structure}]
+    Each session maintains the 1-hour lecture + 2-hour interactive format:
+    \begin{itemize}
+        \item \textbf{Lectures} introduce programming fundamentals through conceptual explanations, Python syntax demonstrations, and exploratory discussions of programming possibilities.
+        
+        \item \textbf{Interactive Sessions} feature guided coding explorations, collaborative concept-mapping exercises, and scaffolded problem-solving activities. Students discover programming applications through carefully structured challenges of progressive complexity. Project-based sessions (S8, S9) will operate as discovery workshops where instructors facilitate conceptual understanding, demonstrate solution pathways, and highlight creative potential through mentor-guided experimentation.
+    \end{itemize}
+\end{tcolorbox}
+
+% --- Example detailed sessions for PY101 (expanding on the overview) ---
+
+\subsection{S1: Intro to Python}
+\objectivebox{
+    \item \textbf{Recognize} the core components of a Python program.
+    \item \textbf{Observe} program execution through simple output examples.
+    \item \textbf{Identify} fundamental data representations (integers, floats, strings, booleans).
+    \item \textbf{Understand} how variables act as containers for data.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE (e.g., VS Code) or online interpreter.
+    \item \textbf{Teaching Aids:} Conceptual diagrams, exploratory code snippets, "Why Programming?" discussion prompts.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{The Landscape of Programming:} How algorithms solve real-world problems. Python's role in data science, automation, and creative coding.
+        \item \textbf{Environment as a Discovery Tool:} Brief environment setup emphasizing its purpose for exploration.
+        \item \textbf{"Hello World!" as Concept Demonstration:} Using \texttt{print()} to reveal program flow.
+        \item \textbf{Data Representation Concepts:} How computers model information through types. Real-world analogies (e.g., numbers as measurements, text as messages).
+        \item \textbf{Variables as Labels:} Metaphors for assignment operations. Basic arithmetic as transformation examples.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Environment Exploration (30 minutes):} Guided discovery of coding interfaces. Observe execution of provided "Hello World!" examples.
+        
+        \item \textbf{Data Type Investigation (45 minutes):} 
+        \begin{itemize}
+            \item Modify pre-written variable examples to observe type behaviors
+            \item Experiment with \texttt{type()} to discover data categories
+        \end{itemize}
+        
+        \item \textbf{Variable Relationships (45 minutes):} 
+        \begin{itemize}
+            \item Adjust given arithmetic templates to observe computational outcomes
+            \item Mapping exercise: Connect variables to real-world representations (e.g., \texttt{temperature = 28.5})
+        \end{itemize}
+        
+        \item \textbf{Concept Synthesis (30 minutes):} 
+        \begin{itemize}
+            \item Group discussion: "How might these concepts enable creating a simple calculator?"
+            \item Reflection: "Where have you encountered similar data representations?"
+        \end{itemize}
+        
+        \item \textbf{Assessment:} Participation in explorations, accurate observations of type behaviors, conceptual connections during synthesis.
+    \end{itemize}
+}
+\subsection{S2: Operators \& Input}
+\objectivebox{
+    \item \textbf{Recognize} different operator categories and their purposes in expressions.
+    \item \textbf{Observe} how user interaction works through the `input()` function.
+    \item \textbf{Understand} the concept of data type conversion in program interactions.
+    \item \textbf{Explore} how simple programs can respond to user-provided information.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Concept diagrams showing operator functions, real-world analogies for input/output, sample conversational programs.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Operators as Building Blocks:} Conceptual overview of arithmetic, comparison, and logical operators as tools for expressing relationships.
+        \item \textbf{Programs as Conversations:} Metaphor of `input()` as "asking questions" and `print()` as "giving answers".
+        \item \textbf{Data Types in Dialog:} Why input needs conversion (text vs. numbers) demonstrated through relatable examples.
+        \item \textbf{Simple Decision Concepts:} Introduction to boolean results as yes/no outcomes using everyday comparisons.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Operator Exploration (45 minutes):}
+        \begin{itemize}
+            \item Experiment with provided operator templates to observe outcomes
+            \item Predict-and-check exercises with comparison chains (e.g., `5 > 3 and 2 == 2`)
+        \end{itemize}
+        
+        \item \textbf{Input Discovery (45 minutes):}
+        \begin{itemize}
+            \item Run pre-built programs that use `input()` for simple questionnaires
+            \item Modify conversion functions (`int()`, `float()`) to observe type changes
+        \end{itemize}
+        
+        \item \textbf{Concept Connection (30 minutes):}
+        \begin{itemize}
+            \item Guided creation of a number-guessing hint generator (e.g., "Is your number > 10?")
+            \item Discussion: "How could these concepts enable a quiz program?"
+        \end{itemize}
+        
+        \item \textbf{Assessment:} Participation in explorations, accurate predictions of operator behaviors, understanding demonstrated in concept discussions.
+    \end{itemize}
+}
+
+% ... (Continue with detailed plans for S3-S9 following the same structure) ...
+% For brevity, only S1 and S2 are detailed here as examples.
+% The actual PY101.tex file should include S3, S4, S5, S6, S7, S8, S9 details.
+
+\subsection{S3: Conditionals}
+\objectivebox{
+    \item \textbf{Recognize} the concept of decision-making and branching logic in programs.
+    \item \textbf{Observe} the flow of program execution based on conditions using \texttt{if}, \texttt{elif}, and \texttt{else} statements.
+    \item \textbf{Understand} how boolean expressions control different program paths.
+    \item \textbf{Explore} how to build programs that respond differently to varying inputs and scenarios.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Flowcharts illustrating conditional logic, scenario cards for decision-making programs (e.g., a "choose your own adventure" game snippet), debugging examples with common logical errors.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Programs as Decision-Makers:} Introduce the idea that programs need to make choices, mimicking human decision processes. Analogies: traffic lights responding to cars, choosing clothes based on weather conditions.
+        \item \textbf{The \texttt{if} Statement:} Basic syntax and the concept of executing a block of code \textit{only if} a specified condition evaluates to \texttt{True}.
+        \item \textbf{\texttt{else} for Alternatives:} Demonstrating how the \texttt{else} block provides a fallback path when the initial \texttt{if} condition evaluates to \texttt{False}.
+        \item \textbf{\texttt{elif} for Multiple Choices:} Handling scenarios with more than two possible outcomes, explaining the order of evaluation for \texttt{elif} statements.
+        \item \textbf{Boolean Expressions Revisited:} Deepen understanding of how comparison and logical operators combine to form the complex conditions that \texttt{if} statements evaluate, leading to \texttt{True} or \texttt{False} outcomes.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Basic \texttt{if} Statement Exploration (45 minutes):}
+        \begin{itemize}
+            \item Run and modify provided simple code snippets containing \texttt{if} statements (e.g., checking if a number is positive, if a string is empty).
+            \item Predict program outcomes for different input values, focusing on whether the conditional block executes.
+        \end{itemize}
+
+        \item \textbf{\texttt{if-else} and \texttt{elif} Challenges (60 minutes):}
+        \begin{itemize}
+            \item Develop programs that use \texttt{if-else} for binary choices (e.g., checking voting eligibility based on age, determining pass/fail).
+            \item Create programs incorporating \texttt{elif} for multiple choices (e.g., a simple grading system assigning A, B, C, D, or F based on a score range).
+            \item Introduce and explore nested conditionals for more complex decision trees (e.g., checking both age and if a special ID is present for entry).
+        \end{itemize}
+
+        \item \textbf{Debugging Conditional Logic (30 minutes):}
+        \begin{itemize}
+            \item Students will be presented with programs containing subtle logic errors within conditionals (e.g., incorrect operator, wrong order of \texttt{elif} clauses, off-by-one errors in ranges).
+            \item Guided practice in using print statements or a debugger to identify and rectify these logical flaws.
+        \end{itemize}
+
+        \item \textbf{Concept Synthesis (15 minutes):}
+        \begin{itemize}
+            \item Group discussion: "How can conditionals make programs appear 'intelligent' or more 'responsive' to user input?"
+            \item Brainstorming real-world scenarios where conditionals are indispensable (e.g., simple games, login systems, automated responses).
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful completion of coding challenges involving \texttt{if}, \texttt{elif}, and \texttt{else}, demonstrated ability to identify and fix conditional logic errors, and active participation in concept discussions.
+    \end{itemize}
+}
+\subsection{S4: Loops}
+\objectivebox{
+    \item \textbf{Recognize} the need for repetition in programming.
+    \item \textbf{Understand} the concept of iteration using \texttt{for} and \texttt{while} loops.
+    \item \textbf{Observe} how loops automate repetitive tasks.
+    \item \textbf{Explore} how to control loop execution (e.g., \texttt{break}, \texttt{continue}).
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Diagrams illustrating loop flow (flowcharts), examples of repetitive real-world tasks, debugging examples for infinite loops.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{The Power of Repetition:} Introduce the concept of loops as a way to avoid writing repetitive code. Analogies: a recipe instructing to stir until smooth, a fitness routine repeating exercises.
+        \item \textbf{\texttt{for} loops (Iterating over Sequences):} Basic syntax of \texttt{for} loops. Explanation of iterating over strings, lists (briefly introduce lists conceptually as sequences), and \texttt{range()} function.
+        \item \textbf{\texttt{while} loops (Conditional Repetition):} Syntax of \texttt{while} loops. Concept of a loop continuing as long as a condition is \texttt{True}. Importance of loop termination to avoid infinite loops.
+        \item \textbf{Controlling Loop Flow:} \texttt{break} statement (exiting a loop early). \texttt{continue} statement (skipping current iteration).
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{\texttt{for} Loop Exploration (50 minutes):}
+        \begin{itemize}
+            \item Run and modify simple \texttt{for} loops to print sequences of numbers or characters.
+            \item Practice iterating over strings to count specific characters.
+            \item Create a program that prints a multiplication table for a given number using a \texttt{for} loop and \texttt{range()}.
+        \end{itemize}
+
+        \item \textbf{\texttt{while} Loop Challenges (50 minutes):}
+        \begin{itemize}
+            \item Develop a program using a \texttt{while} loop to count down from a number to zero.
+            \item Create a simple interactive program that repeatedly asks for user input until a specific keyword is entered (e.g., "quit").
+            \item Introduce a simple guessing game where the user guesses a number until correct, using a \texttt{while} loop.
+        \end{itemize}
+
+        \item \textbf{Loop Control Statements Practice (30 minutes):}
+        \begin{itemize}
+            \item Implement \texttt{break} in a loop that searches for a specific item in a list and stops once found.
+            \item Implement \texttt{continue} in a loop that prints numbers but skips multiples of 3.
+            \item Debugging: Introduce an infinite \texttt{while} loop and guide students to identify and fix the termination condition.
+        \end{itemize}
+
+        \item \textbf{Concept Synthesis (10 minutes):}
+        \begin{itemize}
+            \item Group discussion: "When would you choose a \texttt{for} loop versus a \texttt{while} loop?"
+            \item Brainstorming real-world applications of loops (e.g., processing data, game animations, repetitive calculations).
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful completion of coding challenges using both \texttt{for} and \texttt{while} loops, correct application of \texttt{break} and \texttt{continue}, demonstrated ability to prevent/debug infinite loops, and active participation in concept discussions.
+    \end{itemize}
+}
+\subsection{S5: Functions}
+\objectivebox{
+    \item \textbf{Recognize} the concept of code reusability and modularity through functions.
+    \item \textbf{Understand} how to define and call basic functions in Python.
+    \item \textbf{Observe} the role of parameters and return values in functions.
+    \item \textbf{Explore} how functions help organize code and solve larger problems incrementally.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Diagrams illustrating function calls and data flow, analogy of functions as "mini-programs" or "recipes," code examples demonstrating function definition and calls.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{The Need for Functions:} Introduce the idea of avoiding "copy-pasting" repetitive code. Analogy: a machine that performs a specific task.
+        \item \textbf{Defining Functions (\texttt{def}):} Basic syntax for defining a function using the \texttt{def} keyword, function name, parentheses, and colon. Importance of indentation for the function body.
+        \item \textbf{Calling Functions:} How to execute a defined function.
+        \item \textbf{Parameters (Inputs to Functions):} Explain how parameters act as placeholders for values passed into a function, allowing it to be flexible.
+        \item \textbf{Return Values (Outputs from Functions):} The \texttt{return} keyword and its role in sending a result back from a function. Distinction between printing and returning.
+        \item \textbf{Scope (Brief Introduction):} Briefly touch upon local variables within functions vs. global variables outside, without deep dive.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Basic Function Definition and Calling (50 minutes):}
+        \begin{itemize}
+            \item Write simple functions that greet a user or perform a basic calculation without parameters or return values initially.
+            \item Practice calling these functions multiple times to observe code reuse.
+            \item Modify a previous loop or conditional program to use a simple function to perform a repeated action.
+        \end{itemize}
+
+        \item \textbf{Functions with Parameters and Return Values (50 minutes):}
+        \begin{itemize}
+            \item Create functions that take one or more parameters (e.g., a function that calculates the area of a rectangle, taking length and width).
+            \item Implement functions that return a value (e.g., a function that returns the result of adding two numbers, or a function that returns a formatted string).
+            \item Combine concepts: create a function that takes input, performs a calculation using parameters, and returns the result.
+        \end{itemize}
+
+        \item \textbf{Modular Problem Solving (30 minutes):}
+        \begin{itemize}
+            \item Take a slightly larger problem (e.g., a simple text-based "calculator" that adds, subtracts, etc.) and break it down into smaller functions.
+            \item Discuss how functions improve readability and make debugging easier.
+            \item Debugging: Introduce functions with incorrect parameter passing or missing return statements, and guide students to fix them.
+        \end{itemize}
+
+        \item \textbf{Concept Synthesis (10 minutes):}
+        \begin{itemize}
+            \item Group discussion: "How do functions help us build more complex programs?"
+            \item Brainstorming real-world parallels for functions (e.g., a vending machine, a button on a remote control).
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful definition and calling of functions with and without parameters/return values, demonstrated understanding of modularity, and active participation in discussions on problem decomposition.
+    \end{itemize}
+}
+
+\subsection{\texorpdfstring{S6 \& S7:\\ Data Structures}{S6 \& S7: Data Structures}}
+
+\subsubsection{S6: Data Structures 1 (Lists, Tuples)}
+\objectivebox{
+    \item \textbf{Recognize} the concept of collections for storing multiple pieces of data.
+    \item \textbf{Understand} the characteristics and common uses of Python Lists.
+    \item \textbf{Observe} how to create, access, modify, and iterate through Lists.
+    \item \textbf{Explore} the immutability and applications of Python Tuples.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Visual diagrams of lists/tuples, analogies (e.g., shopping list, fixed recipe ingredients), common list/tuple methods cheatsheet.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Beyond Single Variables:} Introduce the idea of needing to store collections of related data. Analogy: a single box vs. a shelving unit.
+        \item \textbf{Lists (\texttt{[]}):}
+            \begin{itemize}
+                \item Definition: Ordered, mutable collections.
+                \item Creation: empty lists, lists with initial elements.
+                \item Accessing Elements: indexing (positive and negative), slicing.
+                \item Modifying Lists: adding (append, insert, extend), removing (remove, pop, del), changing elements.
+                \item Common List Methods: \texttt{len()}, \texttt{sort()}, \texttt{count()}, \texttt{index()}.
+            \end{itemize}
+        \item \textbf{Tuples (\texttt{()}):}
+            \begin{itemize}
+                \item Definition: Ordered, immutable collections.
+                \item Creation: tuple literals, single-element tuples.
+                \item Accessing Elements: indexing, slicing (similar to lists).
+                \item Immutability: demonstrating what cannot be changed in a tuple.
+                \item Use Cases: When data should not change (e.g., coordinates, record of events).
+            \end{itemize}
+        \item \textbf{Iterating with Loops:} Briefly revisit \texttt{for} loops to iterate over elements in lists and tuples.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{List Manipulation Exercises (60 minutes):}
+        \begin{itemize}
+            \item Create lists of different data types.
+            \item Practice adding/removing elements (e.g., manage a to-do list, update student names).
+            \item Use indexing and slicing to retrieve specific parts of a list.
+            \item Write a program to find the largest/smallest number in a list.
+        \end{itemize}
+
+        \item \textbf{Tuple Exploration (45 minutes):}
+        \begin{itemize}
+            \item Create tuples and attempt to modify them to observe immutability errors.
+            \item Use tuples to store fixed data (e.g., a person's birthdate, RGB color values).
+            \item Convert between lists and tuples.
+        \end{itemize}
+
+        \item \textbf{Combining Concepts (25 minutes):}
+        \begin{itemize}
+            \item Write a function that takes a list of numbers and returns their average.
+            \item Use a loop to process elements from a list of strings.
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful creation and manipulation of lists, demonstrated understanding of tuple immutability, correct use of list/tuple methods in coding exercises.
+    \end{itemize}
+}
+
+\subsubsection{S7: Data Structures 2 (Dictionaries, Sets)}
+\objectivebox{
+    \item \textbf{Understand} the concept of key-value pairs and their application in Dictionaries.
+    \item \textbf{Recognize} the characteristics and common uses of Python Dictionaries.
+    \item \textbf{Observe} how to create, access, modify, and iterate through Dictionaries.
+    \item \textbf{Explore} the concept of unique elements and their application in Python Sets.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Analogies for dictionaries (e.g., phonebook, glossary), analogies for sets (e.g., unique collection of items), common dictionary/set methods cheatsheet.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Dictionaries (\texttt{\{\}}):}
+            \begin{itemize}
+                \item Definition: Unordered, mutable collections of key-value pairs. Keys must be unique and immutable.
+                \item Creation: Empty dictionaries, dictionaries with initial pairs.
+                \item Accessing Elements: using keys. Handling missing keys.
+                \item Modifying Dictionaries: adding new pairs, updating values, removing pairs (\texttt{del}, \texttt{pop}).
+                \item Common Dictionary Methods: \texttt{keys()}, \texttt{values()}, \texttt{items()}, \texttt{get()}.
+                \item Use Cases: Storing structured data (e.g., student records, configuration settings).
+            \end{itemize}
+        \item \textbf{Sets (\texttt{\{\}}):}
+            \begin{itemize}
+                \item Definition: Unordered collections of unique elements. Useful for membership testing and eliminating duplicates.
+                \item Creation: from lists, set literals.
+                \item Basic Set Operations: adding, removing elements.
+                \item Mathematical Set Operations: union, intersection, difference, symmetric difference.
+                \item Use Cases: Checking for unique items, finding common elements between collections.
+            \end{itemize}
+        \item \textbf{Choosing the Right Data Structure:} Brief discussion on when to use lists, tuples, dictionaries, or sets based on problem requirements.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Dictionary Manipulation Exercises (60 minutes):}
+        \begin{itemize}
+            \item Create a dictionary to store contact information (name, phone, email).
+            \item Practice adding new contacts, updating phone numbers, and deleting contacts.
+            \item Write a program to search for a key or value in a dictionary.
+            \item Iterate through dictionary keys, values, and items using loops.
+        \end{itemize}
+
+        \item \textbf{Set Operations Practice (45 minutes):}
+        \begin{itemize}
+            \item Create sets from lists to remove duplicate elements.
+            \item Perform union, intersection, and difference operations between two sets (e.g., finding common hobbies between two people).
+            \item Use sets for fast membership checking.
+        \end{itemize}
+
+        \item \textbf{Data Structure Application Challenge (25 minutes):}
+        \begin{itemize}
+            \item A mini-challenge combining multiple data structures (e.g., using a list of dictionaries to store multiple student records, then using sets to find unique courses taken).
+            \item Discuss problem-solving approaches for data storage.
+        \end{itemize}
+
+        \item \textbf{Assessment:} Successful creation and manipulation of dictionaries, correct application of set operations, ability to choose appropriate data structures for given problems.
+    \end{itemize}
+}
+
+
+\subsection{\texorpdfstring{S8: Project Session \\ Simple Calculator}
+                              {S8: Project Session Simple Calculator}}
+
+\objectivebox{
+    \item \textbf{Apply} all learned Python concepts (input, variables, operators, conditionals, functions) to build a cohesive application.
+    \item \textbf{Design} a user-friendly command-line interface for interaction.
+    \item \textbf{Implement} error handling for invalid user inputs (e.g., non-numeric input, division by zero).
+    \item \textbf{Practice} modular programming by breaking down the calculator's functionality into distinct functions.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Flowchart examples for calculator logic.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Project Introduction \& Scope (15 minutes):} Define the simple calculator project. Discuss its components (getting numbers, choosing operation, performing calculation, displaying result).
+        \item \textbf{Modular Design for Calculators (20 minutes):} Review how to break down the calculator into functions: \texttt{add(a, b)}, \texttt{subtract(a, b)}, \texttt{multiply(a, b)}, \texttt{divide(a, b)}. Emphasize main loop for user interaction.
+        \item \textbf{Error Handling Fundamentals (15 minutes):} Introduction to common errors (e.g., \texttt{ValueError} for non-numeric input, \texttt{ZeroDivisionError}). Simple \texttt{try-except} blocks to gracefully handle these.
+        \item \textbf{User Experience Considerations (10 minutes):} Tips for clear prompts, informative messages, and a continuous loop until the user decides to quit.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Core Calculator Logic (60 minutes):}
+        \begin{itemize}
+            \item Students start by implementing the four basic arithmetic functions (\texttt{add}, \texttt{subtract}, \texttt{multiply}, \texttt{divide}).
+            \item Guided practice in getting numeric input from the user and converting it.
+            \item Implement conditional logic to select the correct operation based on user input (e.g., "+", "-", "*", "/").
+        \end{itemize}
+
+        \item \textbf{User Interface and Loop (50 minutes):}
+        \begin{itemize}
+            \item Wrap the core logic in a \texttt{while} loop to allow multiple calculations without restarting the program.
+            \item Implement a "quit" option for the user.
+            \item Focus on clear \texttt{print()} statements for instructions and results.
+        \end{itemize}
+
+        \item \textbf{Error Handling Implementation (30 minutes, as a challenge):}
+        \begin{itemize}
+            \item Add \texttt{try-except} blocks around input conversion to handle non-numeric input.
+            \item Implement specific handling for \texttt{ZeroDivisionError} in the division function.
+            \item Test the calculator with various invalid inputs to ensure robust behavior.
+        \end{itemize}
+
+        \item \textbf{Assessment:} A functional simple calculator program, clear and concise code, proper use of functions and conditionals, basic error handling implemented.
+    \end{itemize}
+}
+
+\subsection{\texorpdfstring{S9: Project Session\\ Number Guessing Game} {S9: Project Session Number Guessing Game}}
+
+\objectivebox{
+    \item \textbf{Utilize} random number generation to create unpredictable game elements.
+    \item \textbf{Implement} a game loop that continues until a winning condition is met.
+    \item \textbf{Apply} conditional logic to provide user feedback (e.g., "too high," "too low").
+    \item \textbf{Track} and display the number of attempts the user takes to guess correctly.
+}
+\materialsbox{
+    \item \textbf{Hardware:} Computers.
+    \item \textbf{Software:} Python 3 interpreter, IDE/online interpreter.
+    \item \textbf{Teaching Aids:} Diagram illustrating the game flow, `random` module documentation (simplified), examples of game feedback messages.
+}
+\lecturebox{
+    \begin{itemize}
+        \item \textbf{Game Introduction \& Scope (15 minutes):} Define the number guessing game. Outline its rules (computer picks, user guesses, hints provided).
+        \item \textbf{Random Number Generation (\texttt{random} module) (20 minutes):} Introduce the \texttt{random} module, specifically \texttt{random.randint()} for picking a secret number within a range.
+        \item \textbf{The Game Loop (\texttt{while} loop) (15 minutes):} Explain how a \texttt{while} loop is perfect for this game, continuing as long as the guess is incorrect.
+        \item \textbf{Conditional Feedback (10 minutes):} Discuss how \texttt{if}-\texttt{elif}-\texttt{else} statements will be used to tell the user if their guess is too high, too low, or correct.
+        \item \textbf{Counting Attempts (5 minutes):} Show how a simple counter variable can track the number of guesses.
+    \end{itemize}
+}
+\interactivebox{
+    \begin{itemize}
+        \item \textbf{Setting Up the Game (60 minutes):}
+        \begin{itemize}
+            \item Import the \texttt{random} module and generate a random secret number (e.g., between 1 and 100).
+            \item Initialize a counter for guesses.
+            \item Create the basic game loop using \texttt{while False} or a placeholder condition that will be updated.
+            \item Get the first user guess.
+        \end{itemize}
+
+        \item \textbf{Implementing Game Logic (50 minutes):}
+        \begin{itemize}
+            \item Inside the loop, use \texttt{if}-\texttt{elif}-\texttt{else} to compare the user's guess with the secret number.
+            \item Provide appropriate feedback: "Too high!", "Too low!", "Correct!".
+            \item Update the counter with each guess.
+            \item Adjust the \texttt{while} loop condition so it terminates when the correct number is guessed.
+        \end{itemize}
+
+        \item \textbf{Refinement and Polish (30 minutes):}
+        \begin{itemize}
+            \item Add a message displaying the number of attempts when the user wins.
+            \item Implement error handling for non-numeric input (reusing skills from S8).
+            \item Optional challenge: Allow the user to choose the range of the secret number.
+            \item Test the game thoroughly with various guesses and edge cases.
+        \end{itemize}
+
+        \item \textbf{Assessment:} A fully functional number guessing game, correct use of random numbers, effective game loop, appropriate conditional feedback, and accurate tracking of attempts.
+    \end{itemize}
+}

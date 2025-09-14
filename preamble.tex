@@ -1,0 +1,185 @@
+% preamble.tex
+% This file contains all global settings, package inclusions, and custom commands for the document.
+
+% Document Class
+\documentclass[12pt, a4paper]{article} % Using article class for flexibility in styling. 11pt font, A4 paper size.
+
+% --- PACKAGES ---
+%\usepackage[utf8]{inputenc} % Allows direct input of UTF-8 characters. Ignore it if you are using LuaLaTeX or XeLaTeX.
+\usepackage[T1]{fontenc}    % Optimizes font encoding for better output quality.
+
+% Layout and Geometry
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry} % Sets page margins.
+
+% Font Configuration
+\usepackage{helvet} % Helvetica-like font (sans-serif)
+\renewcommand{\familydefault}{\sfdefault} % Set sans-serif as default font.
+\usepackage{lmodern} % Fallback for Latin Modern fonts, good for math.
+\usepackage{microtype} % Improves text appearance (protrusion, expansion, etc.).
+
+% Colors
+\usepackage[table]{xcolor} % For custom colors.
+\definecolor{primaryblue}{HTML}{0056B3}   % A deep blue for main headings, etc.
+\definecolor{secondarygreen}{HTML}{28A745} % A vibrant green for highlights.
+\definecolor{accentorange}{HTML}{FD7E14}  % An orange for subtle accents.
+\definecolor{lightgray}{HTML}{F8F9FA}     % Light background for boxes.
+\definecolor{darkgray}{HTML}{343A40}      % Dark text/lines.
+\definecolor{boxborder}{HTML}{CED4DA}     % Border for boxes.
+\definecolor{lessonboxbg}{HTML}{E9ECEF}   % 
+\definecolor{seminargold}{HTML}{FFEFD5}  % Pale gold background
+\definecolor{seminargreen}{HTML}{E6F5EB} % Mint green for seminar cells
+\definecolor{seminartext}{HTML}{2E8B57}  % Forest green text 
+
+% Hyperlinks
+\usepackage[colorlinks, linkcolor=primaryblue, citecolor=secondarygreen, urlcolor=accentorange]{hyperref}
+% Makes links clickable and colored.
+
+% Graphics and Images
+\usepackage{graphicx} % For including images.
+\graphicspath{{images/}} % Specify path for images.
+
+% Lists
+\usepackage{enumitem} % Enhanced list environments.
+\setlist[itemize]{label=\color{primaryblue}\textbullet, leftmargin=*, noitemsep} % Custom bullet color.
+\setlist[enumerate]{label=\color{primaryblue}\arabic*., leftmargin=*, noitemsep} % Custom enumeration color.
+
+% Headers and Footers
+\usepackage{fancyhdr} % For custom headers and footers.
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields.
+\fancyhead[L]{\nouppercase{\rightmark}} % Section name in left header (e.g., "1. CS100 - Basic Computer Skills")
+\fancyhead[R]{\nouppercase{\leftmark}} % Subsection name in right header (e.g., "S1: Intro to Computers & Operating Systems")
+\fancyfoot[C]{\thepage} % Page number in center footer.
+\renewcommand{\headrulewidth}{0.5pt} % Line under header.
+\renewcommand{\footrulewidth}{0pt} % No line under footer.
+\fancypagestyle{plain}{ % Redefine plain style (e.g., for first page)
+  \fancyhead{} % No header on plain pages.
+  \fancyfoot[C]{\thepage} % Page number only.
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Sectioning and Titles
+\usepackage{titlesec} % Customizable section titles.
+\titleformat{\section}{\Large\bfseries\color{primaryblue}}{\thesection.}{1em}{} % Style for sections.
+\titleformat{\subsection}{\large\bfseries\color{secondarygreen}}{\thesubsection.}{1em}{} % Style for subsections.
+\titleformat{\subsubsection}{\bfseries\color{darkgray}}{\thesubsubsection.}{1em}{} % Style for subsubsections.
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% Boxes for Content (Lecture, Interactive Session, Objectives, Materials)
+\usepackage[most]{tcolorbox} % For creating colored boxes.
+
+% Custom tcolorbox styles
+\tcbset{
+    boxstyle/.style={
+        enhanced,
+        colback=lessonboxbg,     % Background color for the box content
+        colframe=boxborder,      % Frame color
+        boxrule=0.4pt,           % Frame thickness
+        arc=4pt,                 % Rounded corners
+        outer arc=4pt,
+        top=2mm, bottom=2mm, left=2mm, right=2mm, % Padding inside box
+        parbox=false, % Ensure paragraphs are handled correctly
+        breakable, % Allow boxes to break across pages
+        % auto outer arc, % Automatically adjust outer arc based on arc
+    },
+    learningobjectives/.style={
+        boxstyle,
+        coltitle=white,           % Title color
+        colbacktitle=primaryblue, % Title background color
+        fonttitle=\bfseries,      % Title font style
+        attach title to upper,    % Title is part of the upper part of the box
+        title={Learning Objectives}, % Default title for this style
+        left=2mm,right=2mm,top=2mm,bottom=2mm, % Internal padding
+        % icon={%
+        %     \includegraphics[height=1em]{icons/objective_icon.png}% You could use an image here
+        % },
+        % title code={\faIcon[regular]{check-circle} \phantomsection}, % FontAwesome icon for check-circle
+    },
+    materials/.style={
+        boxstyle,
+        coltitle=white,
+        colbacktitle=secondarygreen,
+        fonttitle=\bfseries,
+        attach title to upper,
+        title={Materials},
+        % icon={\faIcon[solid]{box}}
+    },
+    lecture/.style={
+        boxstyle,
+        coltitle=white,
+        colbacktitle=darkgray,
+        fonttitle=\bfseries,
+        attach title to upper,
+        title={Lecture (1 hour)},
+        % icon={\faIcon[solid]{chalkboard-teacher}}
+    },
+    interactive/.style={
+        boxstyle,
+        coltitle=white,
+        colbacktitle=accentorange,
+        fonttitle=\bfseries,
+        attach title to upper,
+        title={Interactive Session (2 hours)},
+        % icon={\faIcon[solid]{users}}
+    }
+}
+
+% Font Awesome Icons (requires package fontawesome5)
+\usepackage{fontawesome5} % For modern icons. Make sure to compile with XeLaTeX or LuaLaTeX if issues arise with regular LaTeX.
+% You can add icons inside tcolorbox titles or itemize labels.
+% Example: \faIcon[solid]{laptop-code} for a computer icon.
+
+% Custom Commands
+\newcommand{\objectivebox}[1]{%
+    \begin{tcolorbox}[learningobjectives]
+        \begin{itemize}
+            #1
+        \end{itemize}
+    \end{tcolorbox}
+}
+
+\newcommand{\materialsbox}[1]{%
+    \begin{tcolorbox}[materials]
+        \begin{itemize}
+            #1
+        \end{itemize}
+    \end{tcolorbox}
+}
+
+\newcommand{\lecturebox}[1]{%
+    \begin{tcolorbox}[lecture]
+        #1
+    \end{tcolorbox}
+}
+
+\newcommand{\interactivebox}[1]{%
+    \begin{tcolorbox}[interactive]
+        #1
+    \end{tcolorbox}
+}
+
+\setlength{\headheight}{15pt}
+
+% For the program schedule table
+\usepackage{longtable} % For tables that span multiple pages.
+\usepackage{tabularx} % For tables with fixed width columns.
+\usepackage{ragged2e} % For text alignment in table cells.
+\usepackage{booktabs} % For professional table lines (toprule, midrule, bottomrule).
+\usepackage{lscape} % For landscape orientation
+\usepackage{rotating} % NEW: Required for rotating content like tables.
+\usepackage{array}
+
+% Custom table styles for consistency
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Left-aligned column with fixed width.
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}   % Center-aligned column with fixed width.
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}   % Right-aligned column with fixed width.
+
+% --- DOCUMENT-SPECIFIC MACROS ---
+\newcommand{\programname}{Azebo Digital Foundation}
+\newcommand{\docsubtitle}{Detailed Lesson Plan}
+\newcommand{\teamname}{[Name]}
+\newcommand{\docdate}{[Date]}
+

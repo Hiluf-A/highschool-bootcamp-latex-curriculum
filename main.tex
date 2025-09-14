@@ -1,0 +1,100 @@
+% main.tex
+% This is the main LaTeX file that compiles all other parts of the document.
+
+\input{preamble.tex} % Include global settings, packages, and custom commands.
+
+\title{} % Suppress default LaTeX title generation.
+\author{} % Suppress default LaTeX author generation.
+\date{}   % Suppress default LaTeX date generation.
+
+\begin{document}
+
+\input{title.tex} % Include the title page.
+
+\clearpage % Start new page for table of contents.
+\tableofcontents % Generate table of contents.
+\thispagestyle{plain} % Ensure page number on ToC.
+
+\clearpage % Start new page for content.
+
+% --- Program Overview ---
+\section*{Program Overview}
+\addcontentsline{toc}{section}{Program Overview} % Add to ToC manually
+
+This document presents the comprehensive lesson plan for the High School \programname. Structured in an interleaved format, the program runs for six weeks, with sessions held three days per week, both in the morning and afternoon. The curriculum introduces students to key technological foundations, including Computer Programming with Python, Basic Electronics, Computer Literacy, and Essential Communication Skills with a focus on speaking and writing.
+
+The program consists of 36 sessions, each divided into a 1-hour instructional lecture followed by a 2-hour hands-on practical session, fostering both conceptual understanding and experiential learning. Each subject culminates in a capstone project, enabling students to apply their skills in a meaningful and creative way.
+
+\subsection*{Program Schedule: 6-Week Interleaved Format}
+%\addcontentsline{toc}{subsection}{Program Schedule: 6-Week Interleaved Format} % Add to ToC manually
+
+\vspace{0.5cm}
+
+% ---- REPLACE TABLE CODE ----
+\begin{landscape}
+\centering
+% Remove rowcolors command (temporary fix)
+\begin{longtable}{
+    >{\columncolor{lightgray!60}}p{1cm} % Week column
+    p{3.5cm} % Mon AM
+    p{3.5cm} % Mon PM
+    p{3.5cm} % Wed AM
+    p{3.5cm} % Wed PM
+    p{3.5cm} % Fri AM
+    >{\columncolor{seminargold!50}}p{3.5cm} % Seminar column
+}
+\toprule
+\rowcolor{primaryblue!85}
+\textcolor{white}{\textbf{Week}} & 
+\textcolor{white}{\textbf{Monday AM}} & 
+\textcolor{white}{\textbf{Monday PM}} & 
+\textcolor{white}{\textbf{Wednesday AM}} & 
+\textcolor{white}{\textbf{Wednesday PM}} & 
+\textcolor{white}{\textbf{Friday AM}} & 
+\textcolor{white}{\textbf{Friday PM}} \\
+\noalign{\smallskip}
+\textcolor{white}{(9am-12pm)} & 
+\textcolor{white}{(1pm-4pm)} & 
+\textcolor{white}{(9am-12pm)} & 
+\textcolor{white}{(1pm-4pm)} & 
+\textcolor{white}{(9am-12pm)} & 
+\textcolor{white}{(1pm-4pm)} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+1 & CS100 S1: Intro to Computers & PY101 S1: Intro to Python & CS100 S2: Touch Typing & PY101 S2: Operators \& Input & EL100 S1: Intro to Electricity & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 1: James Webb Space Telescope(JSWT)}} \\
+
+2 & CM101 S1: Communication Fund. & PY101 S3: Conditionals & CS100 S3: File Management & EL100 S2: Breadboarding & PY101 S4: Loops & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 2: SpaceX's Reusable Rockets}} \\
+
+3 & CM101 S2: Written Communication & PY101 S5: Functions & CS100 S4: Internet \& Email & EL100 S3: Series/Parallel & EL100 S4: Capacitors & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 3: OpenAI's Sora}} \\
+
+4 & CM101 S3: Tech Documentation & PY101 S6: Data Structures 1 & CS100 S5: Cybersecurity & EL100 S5: Microcontrollers & PY101 S7: Data Structures 2 & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 4: Boston Dynamics' Atlas Robot}} \\
+
+5 & CM101 S4: Presentation Skills & PY101 S8: Project Intro & CS100 S6: Productivity \& Cloud & EL100 S6: Simple Sensors & EL100 S7: More Sensors & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 5: CRISPR Gene Editing}} \\
+
+6 & CM101 S5: Presentation Workshop & EL100 S8: Interactive Projects & Seminar 6: Entrepreneurship & PY101 S9: Project Work & EL100 S9: Project Work & 
+\cellcolor{seminargreen!60}\color{seminartext}\parbox{\linewidth}{\textbf{Seminar 6: Neuralink Brain-Computer Interface}} \\
+\end{longtable}
+\end{landscape}
+
+\clearpage % Start new page for Detailed Course Modules.
+
+% --- Detailed Course Modules ---
+\section*{Detailed Course Modules}
+\addcontentsline{toc}{section}{Detailed Course Modules} % Add to ToC manually
+
+\input{computerskills.tex}
+\input{communication.tex}
+\input{python.tex}
+\input{electronics.tex}
+\input{seminars.tex}
+
+\end{document}
