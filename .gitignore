@@ -1,0 +1,17 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Editor backup/swap files
+*~
+*.swp
+
+# Compiled files (we don’t need PDFs in repo)
+*.pdf
